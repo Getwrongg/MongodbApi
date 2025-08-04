@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "Journal API",
+    "_postman_id": "d8d2cf90-b8ad-4b3d-a9b4-61b7d71028df",
+    "description": "CRUD operations for Journal Entries API using Express and MongoDB.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Entry",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"First Entry\",\n  \"content\": \"This is a test journal entry.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/journal",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "journal"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Entries",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/journal",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "journal"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Entry by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/journal/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "journal", ":id"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Entry",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Entry\",\n  \"content\": \"Updated content here.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/journal/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "journal", ":id"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Entry",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/api/journal/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "journal", ":id"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
